@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+<div class="section">
+    <h2>Your Current Holding</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Stock</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>TOTAL</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for stock in agg_list %}
+                <tr>
+                    <td> {{stock["symbol"]}} </td>
+                    <td> {{stock["name"]}} </td>
+                    <td> {{stock["share"]}} </td>
+                    <td> {{usd(stock["price"])}} </td>
+                    <td> {{usd(stock["total"])}} </td>
+                </tr>
+            {% endfor %}
+            <tr id="total">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Cash</td>
+                <td>{{usd(cash[0]["cash"])}}</td>
+            </tr>
+            <tr id="total">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>TOTAL</td>
+                <td>{{usd(cash[0]["cash"]+total_stock_value)}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}
+

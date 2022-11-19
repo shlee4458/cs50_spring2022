@@ -1,0 +1,38 @@
+.navbar-brand{
+    position: relative;
+    width: 170px;
+    left: 0;
+    max-height: 70px;
+
+}
+
+
+main>img{
+    width: 100%;
+    max-height: 50%;
+    object-fit: cover;
+
+}
+
+p{
+    text-align: center;
+    font-style: italic;
+    position: relative;
+    margin: 50px;
+
+}
+
+#last{
+    position: absolute;
+    top: 95%;
+}
+
+/* Centered text */
+.centered {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-style: italic;
+  }
+

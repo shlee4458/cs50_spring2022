@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register Success
+{% endblock %}
+
+{% block main %}
+        <div class="mx-auto my-auto">
+           {{symbol_info["name"]}} ({{symbol_info["symbol"]}}) is currently priced at {{usd(symbol_info["price"])}}
+        </div>
+{% endblock %}
